@@ -133,9 +133,9 @@ type delegateDispatchMock struct {
 	*mock.Mock
 }
 
-func (ddm delegateDispatchMock) DispatchCheck(ctx context.Context, req *v1.DispatchCheckRequest) (*v1.DispatchCheckResponse, error) {
+func (ddm delegateDispatchMock) DispatchCheck(ctx context.Context, req *v1.DispatchCheckRequest) (*v1.DispatchCheckResponse, dispatch.MetadataError) {
 	args := ddm.Called(req)
-	return args.Get(0).(*v1.DispatchCheckResponse), args.Error(1)
+	return args.Get(0).(*v1.DispatchCheckResponse), args.Error(1).(dispatch.MetadataError)
 }
 
 func (ddm delegateDispatchMock) DispatchExpand(ctx context.Context, req *v1.DispatchExpandRequest) (*v1.DispatchExpandResponse, error) {
