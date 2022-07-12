@@ -3,7 +3,7 @@ module github.com/authzed/spicedb
 go 1.18
 
 require (
-	cloud.google.com/go/spanner v1.34.0
+	cloud.google.com/go/spanner v1.34.1
 	github.com/Masterminds/squirrel v1.5.3
 	github.com/authzed/authzed-go v0.6.0
 	github.com/authzed/grpcutil v0.0.0-20220104222419-f813f77722e5
@@ -75,7 +75,7 @@ require (
 )
 
 require (
-	cloud.google.com/go v0.102.0 // indirect
+	cloud.google.com/go v0.102.1 // indirect
 	cloud.google.com/go/compute v1.7.0 // indirect
 	github.com/Azure/go-ansiterm v0.0.0-20210617225240-d185dfc1b5a1 // indirect
 	github.com/Microsoft/go-winio v0.5.2 // indirect
